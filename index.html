@@ -22,71 +22,109 @@
     <div class="myContainer">
       <div class="page_warpper">
         <!-- HEADER START  -->
-        <header class="row justify-content-between mb-3">
+        <header class="row justify-content-between mb-4">
           <div class="head_title col-6">
             <h4>Complete the words.</h4>
           </div>
           <div class="head_icons-wapper col-6">
-            <div class="head_icons_img" id="resourse_icon">
+            <div class="head_icons_img" id="resourse_icon" title="Resourse">
               <img
                 src="./assets/images/resourse_icon.png"
                 alt="resourse_icon"
               />
             </div>
-            <div class="head_icons_img ms-3" id="help_icon">
+            <div class="head_icons_img ms-3" id="help_icon" title="Help">
               <img src="./assets/images/help_icon.png" alt="help_icon" />
             </div>
           </div>
         </header>
         <!-- HEADER END  -->
         <!-- OPTION START -->
-        <div class="content_wapper">
-          <div class="eeeeeeee">
-            <div class="select_options">
-              <div>a</div>
-              <div>p</div>
+        <div class="options">
+          <section class="options_container">
+            <div class="select_options mb-5" id="selectOptions">
+              <button data-optionVal="a" class="opsBtn">a</button>
+              <button data-optionVal="p" class="opsBtn">p</button>
             </div>
-            <div class="options_wapper">
-              <div class="option">
-                <div class="option_text">
-                  1&nbsp;&nbsp;t<span class="optClick" data-trueAnswer="a"
-                    >&nbsp;</span
-                  >p
-                </div>
-                <div class="options_img">
-                  <img src="./assets/images/p19ex24q1_1.png" />
-                </div>
-              </div>
-              <div class="option ">
-                <div class="option_text">
-                  1&nbsp;&nbsp;t<span class="optClick" data-trueAnswer="a"
-                    >&nbsp;</span
-                  >p
-                </div>
-                <div class="options_img">
-                  <img src="./assets/images/p19ex24q1_2.png" />
+            <div class="options_wapper row">
+              <div class="option col-6">
+                <div class="rrr row">
+                  <div class="option_text col-6">
+                    1&nbsp;&nbsp;t<span class="optionSelect" data-answer="a"
+                      >&nbsp;</span
+                    >p
+                  </div>
+                  <div class="options_img col-5">
+                    <img src="./assets/images/p19ex24q1_1.png" />
+                  </div>
                 </div>
               </div>
-              <div class="option">
-                <div class="option_text">
-                  1&nbsp;&nbsp;t<span class="optClick" data-trueAnswer="a"
-                    >&nbsp;</span
-                  >p
+              <div class="option col-6">
+                <div class="rrr row">
+                  <div class="option_text col-6">
+                    2&nbsp;&nbsp;<span class="optionSelect" data-answer="p"
+                      >&nbsp;</span
+                    >a&nbsp;&nbsp;&nbsp;t
+                  </div>
+                  <div class="options_img col-6">
+                    <img src="./assets/images/p19ex24q1_2.png" />
+                  </div>
                 </div>
-                <div class="options_img">
-                  <img src="./assets/images/p19ex24q1_3.png" />
+              </div>
+              <div class="option col-6 m-auto mt-5">
+                <div class="rrr row">
+                  <div class="option_text col-6">
+                    3&nbsp;&nbsp;m<span class="optionSelect" data-answer="a"
+                      >&nbsp;</span
+                    >p
+                  </div>
+                  <div class="options_img col-6">
+                    <img src="./assets/images/p19ex24q1_3.png" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <!-- HELP DIALOG START -->
+            <div class="help_dialog">
+              <div class="help_container row pt-1">
+                <p class="col-6 text-start">Help content goes here.</p>
+                <div class="help_close col-6 text-end" title="Close">
+                  <img src="./assets/images/close_icon.png" alt="close_icon" />
+                </div>
+              </div>
+            </div>
+            <!--  HELP DIALOG END-->
+            <!--  RESOURCE DIALOG START-->
+            <div class="resourse_dialog">
+              <div class="resourse_container row">
+                <div class="resourse_close text-end pt-1" title="Close">
+                  <img  src="./assets/images/close_icon.png" alt="close_icon" />
+                </div>
+              </div>
+            </div>
+            <!-- RESOURCE DIALOG END-->
+          </section>
         </div>
         <!-- OPTION END -->
+        <!-- FOOTER START  -->
+        <div class="content-footer row">
+          <div class="col-6" id="resetOps" title="Reset options">
+            <img src="./assets/images/replay_icon.png" alt="replay_icon" />
+          </div>
+          <div class="col-6" id="showOps" title="Show right options">
+            <img src="./assets/images/showAns_icon.png" alt="showAns_icon" />
+          </div>
+        </div>
+        <!-- FOOTER END  -->
       </div>
     </div>
+    <div class="overLay"></div>
+
     <!-- PAGE END  -->
     <!-- JS START -->
     <script src="./js/libraries/jquery-3.6.4.min.js"></script>
     <script src="./js/libraries/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
     <!-- JS END -->
   </body>
