@@ -22,14 +22,13 @@ $footer_color: #deecf6;
 
 body {
   user-select: none;
-  overflow: hidden;
   font-family: "BreeSerif", Helvetica, Arial, sans-serif;
   transition: 300ms ease-in-out all;
   -webkit-transition: 300ms ease-in-out all;
   -moz-transition: 300ms ease-in-out all;
   -ms-transition: 300ms ease-in-out all;
   -o-transition: 300ms ease-in-out all;
-  
+  overflow: hidden;
 }
 // GLOBAL STYLES END
 
@@ -53,7 +52,6 @@ body {
   background: white;
   margin: auto;
 }
-
 .page_warpper{
   width: 1050px;
   padding: 25px;
@@ -63,6 +61,10 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -5%);
+  -webkit-transform: translate(-50%, -5%);
+  -moz-transform: translate(-50%, -5%);
+  -ms-transform: translate(-50%, -5%);
+  -o-transform: translate(-50%, -5%);
   transform-origin: center center;
   transition: 600ms ease-in-out all;
 }
@@ -70,7 +72,6 @@ body {
 header {
   background-color: $light_color;
   .head_title {
-    
     h4 {
       // border: solid 1px red;
       font-weight: 100;
@@ -236,7 +237,6 @@ header {
     left: 0;
     margin: 0;
     background-color: $light_color;
-    // opacity: 0.9;
     border: solid 2px $border_color;
     width: 100%;
     height: 100%;
@@ -253,8 +253,6 @@ header {
     }
   }
 }
-// DIALOG STYLE END
-
 .resourse_dialog {
   display: none;
   overflow: scroll;
@@ -291,6 +289,7 @@ header {
     }
   }
 }
+// DIALOG STYLE END
 .overLay {
   display: none;
   z-index: 1;

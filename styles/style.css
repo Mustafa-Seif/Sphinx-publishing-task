@@ -12,13 +12,13 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  overflow: hidden;
   font-family: "BreeSerif", Helvetica, Arial, sans-serif;
   transition: 300ms ease-in-out all;
   -webkit-transition: 300ms ease-in-out all;
   -moz-transition: 300ms ease-in-out all;
   -ms-transition: 300ms ease-in-out all;
   -o-transition: 300ms ease-in-out all;
+  overflow: hidden;
 }
 
 #preloader {
@@ -48,6 +48,10 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -5%);
+  -webkit-transform: translate(-50%, -5%);
+  -moz-transform: translate(-50%, -5%);
+  -ms-transform: translate(-50%, -5%);
+  -o-transform: translate(-50%, -5%);
   transform-origin: center center;
   transition: 600ms ease-in-out all;
 }
