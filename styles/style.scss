@@ -5,14 +5,13 @@
 }
 // IMPORT FONTS END
 
-// VARIABLES START 
-$light_color:#fff;
-$dark_color:#000;
-$blue_color:#0FA0C5;
-$border_color:#F5821F;
-$footer_color:#DEECF6;
+// VARIABLES START
+$light_color: #fff;
+$dark_color: #000;
+$blue_color: #0fa0c5;
+$border_color: #f5821f;
+$footer_color: #deecf6;
 // VARIABLES END
-
 
 // GLOBAL STYLES START
 * {
@@ -23,26 +22,21 @@ $footer_color:#DEECF6;
 
 body {
   user-select: none;
+  overflow: hidden;
   font-family: "BreeSerif", Helvetica, Arial, sans-serif;
   transition: 300ms ease-in-out all;
   -webkit-transition: 300ms ease-in-out all;
   -moz-transition: 300ms ease-in-out all;
   -ms-transition: 300ms ease-in-out all;
   -o-transition: 300ms ease-in-out all;
+  
 }
 // GLOBAL STYLES END
-
-// GLOBAL CLASSES
-.myContainer {
-  width: 60%;
-  margin: auto;
-  margin-top: 1.5rem;
-}
 
 // LAODER STYLE START
 #preloader {
   position: fixed;
-  z-index: 99999;
+  z-index: 9999;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -52,29 +46,44 @@ body {
 }
 // LAODER STYLE END
 
-.page_warpper {
-  // border: solid 1px red;
-  // position: relative;
-  // background-color: #0fa0c5;
-  // margin: -1rem 0;
-  // border: solid 1px red;
+// GLOBAL CLASSES
+#container {
+  width: 100%;
+  text-align: center;
+  background: white;
+  margin: auto;
 }
 
-
-
+.page_warpper{
+  width: 1050px;
+  padding: 25px;
+  text-align: center;
+  background: white;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -5%);
+  transform-origin: center center;
+  transition: 600ms ease-in-out all;
+}
 /* HEADER STYLE START */
 header {
   background-color: $light_color;
   .head_title {
+    
     h4 {
+      // border: solid 1px red;
       font-weight: 100;
+      text-align: start;
+      font-size:1.5rem;
+      letter-spacing: .2rem;
     }
   }
   .head_icons-wapper {
     text-align: end;
     .head_icons_img {
       display: inline-block;
-      width: 11%;
+      width: 12%;
       cursor: pointer;
       img {
         width: 100%;
@@ -86,14 +95,14 @@ header {
 /* HEADER STYLE END */
 
 /* OPTION STYLE START  */
-.options{
-  padding:0 1rem ;
+.options {
+  padding: 0 1rem;
   background-color: $blue_color;
 }
 .options_container {
   position: relative;
-  z-index: 99999;
-  transform: scale(1,1.050);
+  z-index: 9;
+  transform: scale(1, 1.05);
   padding: 2rem;
   text-align: center;
   border: solid 3px $border_color;
@@ -107,12 +116,12 @@ header {
     background-color: $light_color;
     .opsBtn {
       display: inline-block;
-      margin: 0 2%;
-      padding: 0.7% 1.7%;
+      margin: 0 1rem;
+      padding: .4rem 1.1rem;
       background-color: $light_color;
       border: solid 2px $blue_color;
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: 500;
       cursor: pointer;
       transition: 300ms ease-in-out all;
       border-radius: 20%;
@@ -135,26 +144,21 @@ header {
 
   /* SELECT OPTION STYLE START */
   .options_wapper {
-    .option{
-      .option_text {
-        cursor: pointer;
-        .optionSelect {
-          position: relative;
-        }
-      }
-      .rrr {
+    .option {
+      .opsChild {
         position: relative;
         justify-content: center;
         align-items: center;
         .option_text {
-          display: inline-block;
+          cursor: pointer;
           font-weight: 500;
-          font-size: 2rem;
+          font-size: 2.2rem;
           .optionSelect {
             display: inline-block;
             position: relative;
-            width: 70px;
-            &::after {
+            width: 30%;
+
+            &::before {
               content: "";
               position: absolute;
               left: 0;
@@ -169,7 +173,6 @@ header {
               -ms-border-radius: 1rem;
               -o-border-radius: 1rem;
             }
-
             // // FROM JS
             .tik_Mark {
               position: absolute;
@@ -205,9 +208,9 @@ header {
   // margin: ;
   width: 100%;
   margin: 0;
-  padding: 1.5rem 0 .5rem 0;
+  padding: 1.5rem 0 0.5rem 0;
   background-color: $footer_color;
-  .showOps {
+  .hideOps {
     opacity: 0.5;
   }
   div {
@@ -242,9 +245,9 @@ header {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    .help_close{
+    .help_close {
       cursor: pointer;
-      img{
+      img {
         width: 10%;
       }
     }
@@ -259,7 +262,7 @@ header {
   width: 100%;
   height: 100%;
   .resourse_container {
-    background: url('../assets/images/dummy.jpg');
+    background: url("../assets/images/dummy.jpg");
     background-size: cover;
     overflow: scroll;
     padding: 1rem;
@@ -282,15 +285,16 @@ header {
       top: 0;
       right: 0;
       cursor: pointer;
-      img{
+      img {
         width: 5%;
       }
     }
   }
 }
-.overLay{
+.overLay {
   display: none;
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -298,19 +302,3 @@ header {
   background-color: #ffffffa1;
 }
 
-@media only screen and (max-width: 1200px) {
-  
-}
-
-// @media screen and (max-width: 995px),
-//        screen and (max-height: 700px) {
-//         .myContainer {
-//           width: 100%;
-//           margin: auto;
-//           margin-top: 1.5rem;
-//         }
-//         .myContainer{
-//           transform: scale(0.50);
-      
-//         }
-// }

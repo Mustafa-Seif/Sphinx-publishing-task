@@ -12,6 +12,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  overflow: hidden;
   font-family: "BreeSerif", Helvetica, Arial, sans-serif;
   transition: 300ms ease-in-out all;
   -webkit-transition: 300ms ease-in-out all;
@@ -20,15 +21,9 @@ body {
   -o-transition: 300ms ease-in-out all;
 }
 
-.myContainer {
-  width: 60%;
-  margin: auto;
-  margin-top: 1.5rem;
-}
-
 #preloader {
   position: fixed;
-  z-index: 99999;
+  z-index: 9999;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -37,19 +32,42 @@ body {
   background-repeat: no-repeat;
 }
 
+#container {
+  width: 100%;
+  text-align: center;
+  background: white;
+  margin: auto;
+}
+
+.page_warpper {
+  width: 1050px;
+  padding: 25px;
+  text-align: center;
+  background: white;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -5%);
+  transform-origin: center center;
+  transition: 600ms ease-in-out all;
+}
+
 /* HEADER STYLE START */
 header {
   background-color: #fff;
 }
 header .head_title h4 {
   font-weight: 100;
+  text-align: start;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
 }
 header .head_icons-wapper {
   text-align: end;
 }
 header .head_icons-wapper .head_icons_img {
   display: inline-block;
-  width: 11%;
+  width: 12%;
   cursor: pointer;
 }
 header .head_icons-wapper .head_icons_img img {
@@ -61,16 +79,16 @@ header .head_icons-wapper .head_icons_img img {
 /* OPTION STYLE START  */
 .options {
   padding: 0 1rem;
-  background-color: #0FA0C5;
+  background-color: #0fa0c5;
 }
 
 .options_container {
   position: relative;
-  z-index: 99999;
+  z-index: 9;
   transform: scale(1, 1.05);
   padding: 2rem;
   text-align: center;
-  border: solid 3px #F5821F;
+  border: solid 3px #f5821f;
   background-color: #fff;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -85,12 +103,12 @@ header .head_icons-wapper .head_icons_img img {
 }
 .options_container .select_options .opsBtn {
   display: inline-block;
-  margin: 0 2%;
-  padding: 0.7% 1.7%;
+  margin: 0 1rem;
+  padding: 0.4rem 1.1rem;
   background-color: #fff;
-  border: solid 2px #0FA0C5;
-  font-size: 1.5rem;
-  font-weight: 600;
+  border: solid 2px #0fa0c5;
+  font-size: 2rem;
+  font-weight: 500;
   cursor: pointer;
   transition: 300ms ease-in-out all;
   border-radius: 20%;
@@ -104,31 +122,25 @@ header .head_icons-wapper .head_icons_img img {
   -o-transition: 300ms ease-in-out all;
 }
 .options_container .selected {
-  background-color: #0FA0C5 !important;
+  background-color: #0fa0c5 !important;
   color: #fff !important;
 }
-.options_container .options_wapper .option .option_text {
-  cursor: pointer;
-}
-.options_container .options_wapper .option .option_text .optionSelect {
-  position: relative;
-}
-.options_container .options_wapper .option .rrr {
+.options_container .options_wapper .option .opsChild {
   position: relative;
   justify-content: center;
   align-items: center;
 }
-.options_container .options_wapper .option .rrr .option_text {
-  display: inline-block;
+.options_container .options_wapper .option .opsChild .option_text {
+  cursor: pointer;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
-.options_container .options_wapper .option .rrr .option_text .optionSelect {
+.options_container .options_wapper .option .opsChild .option_text .optionSelect {
   display: inline-block;
   position: relative;
-  width: 70px;
+  width: 30%;
 }
-.options_container .options_wapper .option .rrr .option_text .optionSelect::after {
+.options_container .options_wapper .option .opsChild .option_text .optionSelect::before {
   content: "";
   position: absolute;
   left: 0;
@@ -143,18 +155,18 @@ header .head_icons-wapper .head_icons_img img {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-.options_container .options_wapper .option .rrr .option_text .optionSelect .tik_Mark {
+.options_container .options_wapper .option .opsChild .option_text .optionSelect .tik_Mark {
   position: absolute;
   top: -1.5rem;
   right: 0;
 }
-.options_container .options_wapper .option .rrr .option_text .optionSelect .tik_Mark img {
+.options_container .options_wapper .option .opsChild .option_text .optionSelect .tik_Mark img {
   width: 70%;
 }
-.options_container .options_wapper .option .rrr .options_img {
+.options_container .options_wapper .option .opsChild .options_img {
   display: inline-block;
 }
-.options_container .options_wapper .option .rrr .options_img img {
+.options_container .options_wapper .option .opsChild .options_img img {
   width: 100%;
 }
 .options_container .options_wapper .options_img img {
@@ -167,9 +179,9 @@ header .head_icons-wapper .head_icons_img img {
   width: 100%;
   margin: 0;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: #DEECF6;
+  background-color: #deecf6;
 }
-.content-footer .showOps {
+.content-footer .hideOps {
   opacity: 0.5;
 }
 .content-footer div img {
@@ -192,7 +204,7 @@ header .head_icons-wapper .head_icons_img img {
   left: 0;
   margin: 0;
   background-color: #fff;
-  border: solid 2px #F5821F;
+  border: solid 2px #f5821f;
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -226,7 +238,7 @@ header .head_icons-wapper .head_icons_img img {
   left: 0;
   margin: 0;
   background-color: #fff;
-  border: solid 3px #F5821F;
+  border: solid 3px #f5821f;
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -247,7 +259,8 @@ header .head_icons-wapper .head_icons_img img {
 
 .overLay {
   display: none;
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;

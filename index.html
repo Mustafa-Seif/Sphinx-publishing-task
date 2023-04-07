@@ -12,6 +12,7 @@
     <!-- STYLES START -->
     <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/media.css" type="text/css" />
     <!-- STYLES END -->
   </head>
   <body>
@@ -19,7 +20,7 @@
     <div id="preloader"></div>
     <!-- PRELOADER  -->
     <!-- PAGE START  -->
-    <div class="myContainer">
+    <div id="container">
       <div class="page_warpper">
         <!-- HEADER START  -->
         <header class="row justify-content-between mb-4">
@@ -48,9 +49,9 @@
             </div>
             <div class="options_wapper row">
               <div class="option col-6">
-                <div class="rrr row">
+                <div class="opsChild row">
                   <div class="option_text col-6">
-                    1&nbsp;&nbsp;t<span class="optionSelect" data-answer="a"
+                    1&nbsp;t<span class="optionSelect" data-answer="a"
                       >&nbsp;</span
                     >p
                   </div>
@@ -60,25 +61,25 @@
                 </div>
               </div>
               <div class="option col-6">
-                <div class="rrr row">
+                <div class="opsChild row">
                   <div class="option_text col-6">
-                    2&nbsp;&nbsp;<span class="optionSelect" data-answer="p"
+                    2&nbsp;<span class="optionSelect" data-answer="p"
                       >&nbsp;</span
-                    >a&nbsp;&nbsp;&nbsp;t
+                    >a&nbsp;t
                   </div>
                   <div class="options_img col-6">
                     <img src="./assets/images/p19ex24q1_2.png" />
                   </div>
                 </div>
               </div>
-              <div class="option col-6 m-auto mt-5">
-                <div class="rrr row">
+              <div class="option col-8 m-auto mt-5">
+                <div class="opsChild row">
                   <div class="option_text col-6">
-                    3&nbsp;&nbsp;m<span class="optionSelect" data-answer="a"
+                    3&nbsp;m<span class="optionSelect" data-answer="a"
                       >&nbsp;</span
                     >p
                   </div>
-                  <div class="options_img col-6">
+                  <div class="options_img col-4">
                     <img src="./assets/images/p19ex24q1_3.png" />
                   </div>
                 </div>
@@ -104,6 +105,7 @@
             </div>
             <!-- RESOURCE DIALOG END-->
           </section>
+          <div class="overLay"></div>
         </div>
         <!-- OPTION END -->
         <!-- FOOTER START  -->
@@ -118,12 +120,11 @@
         <!-- FOOTER END  -->
       </div>
     </div>
-    <div class="overLay"></div>
-
     <!-- PAGE END  -->
     <!-- JS START -->
     <script src="./js/libraries/jquery-3.6.4.min.js"></script>
     <script src="./js/libraries/bootstrap.min.js"></script>
+    <script  src="./js/jquery-ui.min.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
     <!-- JS END -->

@@ -1,5 +1,6 @@
 // GLOBAL VAR
 let selectVal;
+let filldArr=[];
 
 // SELECTED ELEMENT FROM DOM 
 let selectOps = document.getElementById("selectOptions");
@@ -42,7 +43,7 @@ selectOps.addEventListener("click", (e) => {
 });
 
 //2- CHECK IF SELECTED ELEMENT DATA SET EQUAL <selectVal>
-optionSelect.forEach((el) => {
+optionSelect.forEach((el,i) => {
   el.addEventListener("click", (e) => {
     // CHECK IF SELECTED ELEMENT DOES NOT HAS <filled> CLASS
     if (!el.classList.contains("filled")) {
@@ -58,6 +59,7 @@ optionSelect.forEach((el) => {
         selectOpsBtn.forEach((el) => {
           el.classList.remove("selected");
         });
+        filldArr.push(i)
       } else if(el.dataset.answer !== selectVal && selectVal){
         el.innerHTML = `${selectVal} <span class="tik_Mark"><img class="w-50 ms-4 mb-1" src="../assets/images/false-small.png"/></span>`;
         setTimeout(()=>{
@@ -66,12 +68,15 @@ optionSelect.forEach((el) => {
         fault.play();
       }
     }
+    if (filldArr.length == 3) {
+      showOps.classList.add("hideOps")
+    }
   });
 });
 
 //4- SHOW CORRECT ANSWERS
 const showCorrect = () => {
-  if (!showOps.classList.contains("showOps")) {
+  if (!showOps.classList.contains("hideOps")) {
      optionSelect.forEach((el) => {
     el.innerHTML = `${el.dataset.answer} <span class="tik_Mark"><img src="../assets/images/tikMark-small.png"/></span>`;
     // ADD <filld> CLASS (SELETED)
@@ -85,11 +90,10 @@ const showCorrect = () => {
       el.classList.remove("selected");
     });
   });
-  showOps.classList.add("showOps")
+  showOps.classList.add("hideOps")
   }
 };
 showOps.addEventListener("click", showCorrect);
-
 
 // RESET OPTIONS
 resetOps.addEventListener("click", () => {
@@ -102,6 +106,7 @@ resetOps.addEventListener("click", () => {
   selectOpsBtn.forEach((el) => {
     el.classList.remove("selected");
   });
-
-  showOps.classList.remove("showOps")
+  showOps.classList.remove("hideOps")
+  filldArr.length = 0;
 });
+
