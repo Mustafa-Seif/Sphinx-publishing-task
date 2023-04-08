@@ -36,6 +36,10 @@ $(function () {
       $(window).width() / elWidth,
       $(window).height() / elHeight
     );
+
+    // MAKE SCALE LESS THAN 1 ON ALL SCREENS 
+    scale<1?scale:scale=.95
+
     $el.css({
       transform: "translate(-50%, -5%) " + "scale(" + scale + ")",
     });
