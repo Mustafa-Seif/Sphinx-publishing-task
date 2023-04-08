@@ -36,10 +36,6 @@ $(function () {
       $(window).width() / elWidth,
       $(window).height() / elHeight
     );
-
-    console.log(scale);
-    console.log($el);
-
     $el.css({
       transform: "translate(-50%, -5%) " + "scale(" + scale + ")",
     });

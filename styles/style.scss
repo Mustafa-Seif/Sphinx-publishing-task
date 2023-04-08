@@ -51,7 +51,7 @@ body {
   text-align: center;
   background: white;
   margin: auto;
-}
+
 .page_warpper{
   width: 1050px;
   padding: 25px;
@@ -67,7 +67,7 @@ body {
   -o-transform: translate(-50%, -5%);
   transform-origin: center center;
   transition: 600ms ease-in-out all;
-}
+
 /* HEADER STYLE START */
 header {
   background-color: $light_color;
@@ -300,4 +300,5 @@ header {
   left: 0;
   background-color: #ffffffa1;
 }
-
+}
+}

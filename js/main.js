@@ -107,6 +107,6 @@ resetOps.addEventListener("click", () => {
     el.classList.remove("selected");
   });
   showOps.classList.remove("hideOps")
-  filldArr.length = 0;
+  filldArr.splice(0);
 });
 
