@@ -25,9 +25,9 @@ $(function () {
   });
 
   // MAKE PAGE CONTENT SCALABLE
-  let $el = $(".page_warpper");
-  let elHeight = $el.outerHeight();
-  let elWidth = $el.outerWidth();
+  let el = $(".page_warpper");
+  let elHeight = el.outerHeight();
+  let elWidth = el.outerWidth();
 
   function doResize() {
     let scale;
@@ -40,7 +40,7 @@ $(function () {
     // MAKE SCALE LESS THAN 1 ON ALL SCREENS 
     scale<1?scale:scale=.95
 
-    $el.css({
+    el.css({
       transform: "translate(-50%, -5%) " + "scale(" + scale + ")",
     });
   }

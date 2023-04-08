@@ -68,6 +68,7 @@ optionSelect.forEach((el,i) => {
         fault.play();
       }
     }
+    // CHECK IF ALL ELEMENT TOOK CLASS "FILLED" AND GIVE SHOW CORRECT ANSWERS CLASS "hideOps"
     if (filldArr.length == 3) {
       showOps.classList.add("hideOps")
     }
@@ -90,6 +91,7 @@ const showCorrect = () => {
       el.classList.remove("selected");
     });
   });
+  // REOMVE "hideOps" CLASS FROM SHOW CORRECT ANSWERS AFTER CLICKED IT
   showOps.classList.add("hideOps")
   }
 };
@@ -106,6 +108,7 @@ resetOps.addEventListener("click", () => {
   selectOpsBtn.forEach((el) => {
     el.classList.remove("selected");
   });
+  // REOMVE "hideOps" CLASS FROM SHOW CORRECT ANSWERS AFTER RESET OPTONS 
   showOps.classList.remove("hideOps")
   filldArr.splice(0);
 });
