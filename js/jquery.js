@@ -25,12 +25,12 @@ $(function () {
   });
 
   // MAKE PAGE CONTENT SCALABLE
-  var $el = $(".page_warpper");
-  var elHeight = $el.outerHeight();
-  var elWidth = $el.outerWidth();
+  let $el = $(".page_warpper");
+  let elHeight = $el.outerHeight();
+  let elWidth = $el.outerWidth();
 
   function doResize() {
-    var scale;
+    let scale;
 
     scale = Math.min(
       $(window).width() / elWidth,
