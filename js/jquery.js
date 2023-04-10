@@ -38,8 +38,6 @@ $(function () {
     );
 
     // MAKE SCALE LESS THAN 1 ON ALL SCREENS 
-    scale<1?scale:scale=.95
-
     el.css({
       transform: "translate(-50%, 0%) " + "scale(" + scale + ")",
     });
