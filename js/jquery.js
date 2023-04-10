@@ -41,7 +41,7 @@ $(function () {
     scale<1?scale:scale=.95
 
     el.css({
-      transform: "translate(-50%, -5%) " + "scale(" + scale + ")",
+      transform: "translate(-50%, 0%) " + "scale(" + scale + ")",
     });
   }
   doResize();
