@@ -10,8 +10,8 @@ let resetOps = document.getElementById("resetOps");
 let showOps = document.getElementById("showOps");
 
 // AUDIO VAR
-const correct = new Audio("../assets/audio/correct.mp3");
-const fault = new Audio("../assets/audio/negative.mp3");
+const correct = document.getElementById("correctAudio")
+const fault = document.getElementById("faultAudio")
 
 // 1- CHANGE SELECTED OPTION VALUE ON SELECT
 selectOps.addEventListener("click", (e) => {
@@ -48,7 +48,7 @@ optionSelect.forEach((el,i) => {
     // CHECK IF SELECTED ELEMENT DOES NOT HAS <filled> CLASS
     if (!el.classList.contains("filled")) {
       if (el.dataset.answer === selectVal) {
-        el.innerHTML = `${el.dataset.answer} <span class="tik_Mark"><img src="../assets/images/tikMark-small.png"/></span>`;
+        el.innerHTML = `${el.dataset.answer} <span class="tik_Mark"><img src="../Sphinx-publishing-task/assets/images/tikMark-small.png"/></span>`;
         // ADD <filld> CLASS (SELETED)
         el.classList.add("filled");
         // ADD AUDIO CORRECT
@@ -61,7 +61,7 @@ optionSelect.forEach((el,i) => {
         });
         filldArr.push(i)
       } else if(el.dataset.answer !== selectVal && selectVal){
-        el.innerHTML = `${selectVal} <span class="tik_Mark"><img class="w-50 ms-4 mb-1" src="../assets/images/false-small.png"/></span>`;
+        el.innerHTML = `${selectVal} <span class="tik_Mark"><img class="w-50 ms-4 mb-1" src="../Sphinx-publishing-task/assets/images/false-small.png"/></span>`;
         setTimeout(()=>{
           el.innerHTML ="&nbsp;"
         },1000)
@@ -79,7 +79,7 @@ optionSelect.forEach((el,i) => {
 const showCorrect = () => {
   if (!showOps.classList.contains("hideOps")) {
      optionSelect.forEach((el) => {
-    el.innerHTML = `${el.dataset.answer} <span class="tik_Mark"><img src="../assets/images/tikMark-small.png"/></span>`;
+    el.innerHTML = `${el.dataset.answer} <span class="tik_Mark"><img src="../Sphinx-publishing-task/assets/images/tikMark-small.png"/></span>`;
     // ADD <filld> CLASS (SELETED)
     el.classList.add("filled");
     // ADD AUDIO CORRECT
